@@ -1,0 +1,9 @@
+en:
+  layouts:
+    header:
+      title: "Blog App"
+      signup: "Signup"
+
+  static_pages:
+    home:
+      title: "Blog app"
