@@ -9,7 +9,7 @@ en:
       profile: "Profile"
       settings: "Settings"
       logout: "Log out"
-      login: "Login"
+      login: "Signin"
 
   static_pages:
     home:
@@ -26,6 +26,28 @@ en:
       danger: "Not create user"
     find_user:
       danger: "User not found!"
+    edit:
+      title: "Edit user"
+      edit: "Update your profile"
+      button: "Save changes"
+      change: "Change"
+    update:
+      susscess: "Profile updated"
+    logged_in_user:
+      danger: "Please log in."
+    index:
+      title: "All user"
+      stt: "STT"
+      name: "Name"
+      avatar: "Avatar"
+      email: "Email"
+      active: "Active"
+      delete: "Delete"
+      confirm: "Confirm delete user"
+    destroy:
+      success: "User deleted"
+      danger: "User not deleted"
+
 
   shared:
     error_messages:
