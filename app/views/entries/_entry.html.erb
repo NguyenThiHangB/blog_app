@@ -1,10 +1,10 @@
-<li>
-  <%= link_to gravatar_for(entry.user, size: Settings.entry.avatar.size), entry.user%>
-  <span>
-    <span class="user"><%= link_to entry.user.name, entry.user %> </span>
-    <span class="timestamp">
-      <%= t ".entry" %> <%= time_ago_in_words(entry.created_at)%> <%= t ".ago" %>
-    </span>
+<li id="entry-<%= entry.id %>">
+  <%= link_to gravatar_for(entry.user, size: Settings.entry.avatar.size), entry.user %>
+  <span class="user"><%= link_to entry.user.name, entry_path(entry.id) %></span>
+  <span class="content"><%= entry.title %>
+    <%= link_to t(".detail"), entry_path(entry.id) %>
   </span>
-  <span class="title"><%= link_to entry.title, entry_path(entry.id)%></span>
+  <span class="timestamp">
+    <%= t ".posted" %> <%= time_ago_in_words(entry.created_at) %> <%= t ".ago" %>
+  </span>
 </li>

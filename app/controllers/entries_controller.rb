@@ -1,7 +1,7 @@
 class EntriesController < ApplicationController
   before_action :logged_in_user, only: %i(create destroy)
   before_action :find_entry, only: [:show]
-  before_action :correct_user, only: %i(show edit update destroy)
+  before_action :correct_user, only: %i(edit update destroy)
 
   def index
     @entries = Entry.index_entry
@@ -30,7 +30,21 @@ class EntriesController < ApplicationController
   def edit; end
 
   def update
+    if @entry.update_attributes entry_params
+      flash[:success] = t ".success"
+      redirect_to @entry
+    else
+      render :edit
+    end
+  end
 
+  def destroy
+    if @entry.destroy
+      flash[:success] = t ".success"
+    else
+      flash[:danger] = t ".danger"
+    end
+    redirect_to current_user
   end
 
   private

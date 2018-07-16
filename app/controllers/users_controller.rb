@@ -15,6 +15,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    @entries = @user.entries.order_by_created_at
+                 .page(params[:page])
+                 .per Settings.entry.per_page
   end
 
   def create

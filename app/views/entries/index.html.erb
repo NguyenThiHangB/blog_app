@@ -18,7 +18,7 @@
       <span>
         <span class="user"><%= link_to entry.user.name, entry.user %> </span>
         <span class="timestamp">
-          <%= t ".entry" %> <%= time_ago_in_words(entry.created_at)%> <%= t ".ago" %>
+          <%= t ".posted" %> <%= time_ago_in_words(entry.created_at)%> <%= t ".ago" %>
         </span>
       </span>
       <span class="title"><%= link_to entry.title, entry_path(entry.id)%></span>
