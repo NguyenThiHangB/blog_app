@@ -2,8 +2,26 @@ en:
   layouts:
     header:
       title: "Blog App"
+      signin: "Signin"
       signup: "Signup"
 
   static_pages:
     home:
       title: "Blog app"
+
+  users:
+    new:
+      title: "Signup"
+      button: "Create my account"
+    form:
+      confirmation: "Confirmation password"
+    create:
+      info: "Welcome to the Blog!"
+      danger: "Not create user"
+    find_user:
+      danger: "User not found!"
+
+  shared:
+    error_messages:
+      error: "The form contains"
+      pluralize: "error"
