@@ -10,6 +10,7 @@ en:
       settings: "Settings"
       logout: "Log out"
       login: "Signin"
+      entry: "Create entry"
 
   static_pages:
     home:
@@ -107,4 +108,25 @@ en:
     check_expiration:
       danger: "Password reset has expired."
 
+  application:
+    logged_in_user:
+      danger: "Please log in."
 
+  entries:
+    new:
+      title: "Create new entry"
+      button: "Create entry"
+    entry_form:
+      content: "Content"
+    create:
+      success: "Entry created!"
+    find_entry:
+      danger: "Entry not found."
+    index:
+      title: "All entry"
+      entry: "Entry"
+      ago: "ago"
+      search: "Search"
+    show:
+      author: "Author"
+      date: "Date"

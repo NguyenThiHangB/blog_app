@@ -16,3 +16,10 @@ user_helper:
 
 session:
   remember: 1
+
+entry:
+  title:
+    length: 140
+  per_page: 20
+  avatar:
+    size: 60
