@@ -8,6 +8,8 @@ user:
   per_page: 20
   index:
     size: 50
+  reset:
+    password: 2
 
 user_helper:
   size: 80

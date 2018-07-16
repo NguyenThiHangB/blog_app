@@ -18,6 +18,7 @@
         <% end %>
       </div>
       <%= f.submit t(".login"), class: "btn btn-primary" %>
+       <%= link_to t(".forgot"), new_password_reset_path %>
     <% end %>
     <p><%= t ".new" %>
       <%= link_to t(".signup"), signup_path %>
