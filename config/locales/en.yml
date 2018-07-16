@@ -4,6 +4,12 @@ en:
       title: "Blog App"
       signin: "Signin"
       signup: "Signup"
+      user: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Log out"
+      login: "Login"
 
   static_pages:
     home:
@@ -25,3 +31,12 @@ en:
     error_messages:
       error: "The form contains"
       pluralize: "error"
+
+  sessions:
+    new:
+      login: "Login"
+      new: "New user?"
+      signup: "Sign up now!"
+      span: "Remember me on this computer"
+    create:
+      danger: "Invalid email/password combination"
