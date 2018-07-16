@@ -1,0 +1,20 @@
+<div class="entry-article">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-8">
+        <h1 class="title"><%= @entry.title %></h1>
+        <span>
+          <%= t ".author" %> <%= link_to @entry.user.name, @entry.user%>
+          <br/>
+          <%= t ".date" %> <%= @entry.created_at.strftime("%H:%M %d/%m/%Y") %>
+        </span>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+    </div>
+  </div>
+  <div class="entry">
+    <%= @entry.content %>
+  </div>
+</div>
