@@ -3,13 +3,15 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  scope :index_user, ->{select("id, name, email").order created_at: :desc}
+
   validates :name, presence: true, length: {maximum: Settings.user.name.length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: Settings.user.email.length},
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.user.password.length}
+    length: {minimum: Settings.user.password.length}, allow_nil: true
 
   has_secure_password
 
