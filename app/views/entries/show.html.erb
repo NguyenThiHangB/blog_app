@@ -10,7 +10,11 @@
         </span>
       </div>
       <div class="col-md-4">
-
+        <% if @entry.user.current_user?(current_user) %>
+          <%= link_to t(".edit"), edit_entry_path(@entry), class: "btn btn-success" %>
+          <%= link_to t(".delete"), @entry, method: :delete,
+            data: { confirm: t(".confirm") }, class: "btn btn-danger" %>
+        <% end %>
       </div>
     </div>
   </div>

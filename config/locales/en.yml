@@ -48,6 +48,8 @@ en:
     destroy:
       success: "User deleted"
       danger: "User not deleted"
+    show:
+      entries: "Entries -"
 
 
   shared:
@@ -124,9 +126,24 @@ en:
       danger: "Entry not found."
     index:
       title: "All entry"
-      entry: "Entry"
-      ago: "ago"
+      posted: "Posted"
+      ago: "ago."
       search: "Search"
     show:
       author: "Author"
       date: "Date"
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "You sure delete?"
+    edit:
+      title: "Edit entry"
+      button: "Save entry"
+    update:
+      success: "Update entry success!"
+    destroy:
+      success: "Delete entry success."
+      danger: "Entry not deleted."
+    entry:
+      posted: "Posted"
+      ago: "ago."
+      detail: "<--Detail-->"
