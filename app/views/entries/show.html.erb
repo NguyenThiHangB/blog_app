@@ -22,4 +22,12 @@
     <%= @entry.content %>
   </div>
 </div>
-<%= render "comment" %>
+<h3><%= t ".comments" %> (<%= @entry.comments.count%>)</h3>
+<% if logged_in? %>
+  <%= render "comment_form" %>
+<% else %>
+  <%= link_to t(".login"), login_path, class: "center-text btn btn-info" %>
+<% end %>
+<%= render "comments/comment", comment: @comment %>
+
+

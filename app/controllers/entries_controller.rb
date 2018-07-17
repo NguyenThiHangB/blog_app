@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   before_action :correct_user, only: %i(edit update destroy)
 
   def index
-    @entries = Entry.index_entry
+      @entries = Entry.search(params[:search])
                  .page(params[:page])
                  .per Settings.entry.per_page
   end

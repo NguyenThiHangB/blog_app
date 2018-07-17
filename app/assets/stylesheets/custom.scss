@@ -184,7 +184,7 @@ aside {
   list-style: none;
   li {
     padding: 20px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid $color_gray_nurse_approx;
   }
   .user {
     margin-top: 5em;
@@ -216,7 +216,7 @@ aside {
 
 input, textarea, select, .uneditable-input {
   @include box_sizing;
-  border: 1px solid #bbb;
+  border: 1px solid $color_pink_swan_approx;
   margin-bottom: 15px;
   width: 100%;
 }
@@ -262,7 +262,7 @@ checkbox {
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid $color_gray_nurse_approx;
   }
   .user {
     margin-top: 5em;
@@ -309,5 +309,15 @@ span.picture {
 .entry {
   margin-top: 20px;
   padding: 10px 10px;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid $color_gray_nurse_approx;
 }
+
+/* comment */
+#comment-form {
+  list-style: none;
+  margin-top: 60px;
+  .timestamp {
+    color: $gray-light;
+  }
+}
+

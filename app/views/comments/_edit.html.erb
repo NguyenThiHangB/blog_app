@@ -1,14 +1,13 @@
 <span id="form_comment">
-  <%= form_for comment, remote: true do |f| %>
+  <%= form_for @comment, remote: true do |f| %>
     <%= render "shared/error_messages", object: f.object %>
-    <%= f.hidden_field :entry_id, value: @entry.id %>
+    <%= f.hidden_field :entry_id, value: @comment.entry.id %>
     <%= f.hidden_field :user_id, value: current_user.id if current_user != nil %>
     <div class="from-group">
-      <%= f.text_area :content, class: "form-control", placeholder: t(".comment") %>
+      <%= f.text_area :content, class: "form-control", value: @comment.content %>
     </div>
     <div class="from-group">
       <%= f.submit t(".submit"), class: "btn btn-success col-md-1" %>
     </div>
   <% end %>
 </span>
-

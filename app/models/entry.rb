@@ -15,4 +15,15 @@ class Entry < ApplicationRecord
   validates :user_id, presence: true
   validates :title, presence: true, length: {maximum: Settings.entry.title.length}
   validates :content, presence: true
+
+  class << self
+    def search search
+      if search
+        where("title LIKE ?", "%#{search}%")
+      else
+        all
+      end
+    end
+  end
+
 end

@@ -1,5 +1,4 @@
 <div id="comment-form">
-  <h3><%= t ".comments" %> (<%= @entry.comments.count%>)</h3>
   <% @comments.each do |comment| %>
       <li>
         <%= link_to gravatar_for(comment.user, size: Settings.comment.avatar.size), comment.user%>
@@ -9,12 +8,16 @@
             <%= time_ago_in_words(comment.created_at)%> <%= t".ago" %>
           </span>
           <span>
-
+            <% if comment.user.current_user?(current_user) %>
+              <%= link_to t(".edit"), edit_comment_path(comment), remote: true %>
+              <%= link_to t(".delete"), comment, method: :delete,
+                data: {confirm: t(".confirm")}, remote: true %>
+            <% end %>
           </span>
+          <span class="content"><p><%= comment.content %></p></span>
         </span>
-        <span class="content"><p><%= comment.content %>
         <hr/>
       </li>
   <% end %>
-  <%= render "comments/form", comment: @comment %>
 </div>
+
