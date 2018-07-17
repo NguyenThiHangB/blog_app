@@ -45,17 +45,35 @@ en:
       active: "Active"
       delete: "Delete"
       confirm: "Confirm delete user"
+      danger: "Delete not susscess."
     destroy:
       success: "User deleted"
       danger: "User not deleted"
     show:
       entries: "Entries -"
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "UnFollow"
+      title: "UnFollow"
+    show_follow:
+      link: "View my profile"
+      entry: "Entries"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
+    user:
+      confirm: "You sure?"
 
 
   shared:
     error_messages:
       error: "The form contains"
       pluralize: "error"
+    stats:
+      following: "following"
+      followers: "followers"
 
   sessions:
     new:
