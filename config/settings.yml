@@ -23,3 +23,6 @@ entry:
   per_page: 20
   avatar:
     size: 60
+
+show_follow:
+  size: 40
