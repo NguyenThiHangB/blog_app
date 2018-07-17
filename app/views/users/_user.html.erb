@@ -1,8 +1,4 @@
 <li>
   <%= gravatar_for user, size: Settings.show_follow.size %>
   <%= link_to user.name, user %>
-  <% if current_user.admin? && !user.current_user?(current_user) %>
-    | <%= link_to "delete", user, method: :delete,
-                                  data: { confirm: t(".confirm") } %>
-  <% end %>
 </li>
