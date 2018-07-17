@@ -26,3 +26,7 @@ entry:
 
 show_follow:
   size: 40
+
+comment:
+  avatar:
+    size: 30

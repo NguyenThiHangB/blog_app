@@ -165,3 +165,17 @@ en:
       posted: "Posted"
       ago: "ago."
       detail: "<--Detail-->"
+    comment:
+      comments: "Comments"
+      ago: "ago."
+      edit: "Edit"
+      delete: "Delete"
+      confirm: "You sure delete comment?"
+
+  comments:
+    form:
+      comment: "Comments ..."
+      submit: "Comment"
+    create:
+      danger: "You must login."
+

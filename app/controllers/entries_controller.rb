@@ -10,7 +10,8 @@ class EntriesController < ApplicationController
   end
 
   def show
-
+    @comments = @entry.comments.all
+    @comment = @entry.comments.build
   end
 
   def new
